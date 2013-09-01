@@ -1,5 +1,6 @@
 module ForemanCustomParameters
   class Engine < ::Rails::Engine
+    isolate_namespace ForemanCustomParameters
     config.to_prepare do
       ::Host::Base.send :include, ForemanCustomParameters::AddDefaults
       ::Hostgroup.send :include, ForemanCustomParameters::AddDefaults

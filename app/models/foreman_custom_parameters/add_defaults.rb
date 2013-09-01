@@ -3,13 +3,16 @@ module ForemanCustomParameters
     extend ActiveSupport::Concern
 
     included do
-      after_initialize :add_default_custom_parameters
+      # after_initialize callback is also called after .find, so limit to .new_record?
+      after_initialize :add_default_custom_parameters, :if => 'self.new_record?'
     end
 
     def add_default_custom_parameters
-      unless self.send(parameters_method).map(&:name).any? { |name| CUSTOM_PARAMETERS[parameters_type].include?(name) }
-        CUSTOM_PARAMETERS[parameters_type].each do |k, v|
-          self.send(parameters_method).build(:name => k, :value => v)
+      if CUSTOM_PARAMETERS[parameters_type].present?
+        unless self.send(parameters_method).map(&:name).any? { |name| CUSTOM_PARAMETERS[parameters_type].include?(name) }
+          CUSTOM_PARAMETERS[parameters_type].each do |k, v|
+            self.send(parameters_method).build(:name => k, :value => v)
+          end
         end
       end
     end
