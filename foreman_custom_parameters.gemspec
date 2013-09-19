@@ -7,16 +7,12 @@ require "foreman_custom_parameters/version"
 Gem::Specification.new do |s|
   s.name        = "foreman_custom_parameters"
   s.version     = ForemanCustomParameters::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of ForemanCustomParameters."
-  s.description = "TODO: Description of ForemanCustomParameters."
+  s.authors     = ["Joseph Magen"]
+  s.email       = ["jmagen@redhat.com"]
+  s.homepage    = "http://github.com/theforeman/foreman_custom_parameters"
+  s.summary     = "Foreman plugin to improve storage of custom information in parameters"
+  s.description = "Foreman plugin to improve storage of custom information in parameters"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
-
-  s.add_dependency "rails", "~> 3.2.13"
-  # s.add_dependency "jquery-rails"
-  #s.add_development_dependency "sqlite3"
 end
