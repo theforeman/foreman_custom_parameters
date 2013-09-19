@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Joseph Magen"]
   s.email       = ["jmagen@redhat.com"]
   s.homepage    = "http://github.com/theforeman/foreman_custom_parameters"
+  s.licenses    = ["GPL-3"]
   s.summary     = "Foreman plugin to improve storage of custom information in parameters"
   s.description = "Foreman plugin to improve storage of custom information in parameters"
 
