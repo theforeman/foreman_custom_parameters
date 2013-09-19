@@ -1,0 +1,18 @@
+# Custom parameters and their default value
+# When a new host is created, a Host Parameter is automatically added with the default value
+# Note: Ensure that are integers are wrapped with quotes to avoid errors
+
+:custom_parameters:
+#  hosts:
+#    cabinet_number: "12"
+#    cabinet_color: red
+#  hostgroups:
+#    hg_param1: aaa
+#    hg_param2: bbb
+#  operatingsystems:
+#    os_param1:
+#    os_param2:
+#  domains:
+#    domain_param1:
+#    domain_param2:
+
