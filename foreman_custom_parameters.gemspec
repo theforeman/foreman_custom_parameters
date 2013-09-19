@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
   s.summary     = "Foreman plugin to improve storage of custom information in parameters"
   s.description = "Foreman plugin to improve storage of custom information in parameters"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.rdoc", "custom_parameters.yaml.example"]
   s.test_files = Dir["test/**/*"]
 end

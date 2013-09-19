@@ -1,20 +1,23 @@
 # ForemanCustomParameters
 
-This rails engine/plugin to Foreman leverages the existing functionality whereby parameters can defined on hosts, host groups, domains, and operating systems and read by Puppet.  The default parameters defined in /config/custom_parameters.yml are automatically added to new objects.
+This rails engine/plugin to Foreman leverages the existing functionality whereby parameters can defined on hosts, host groups, domains, and operating systems and read by Puppet.  The default parameters defined in config/settings.plugins.d/custom_parameters.yaml are automatically added to new objects.
 
 ## Installation
 
-Install the gem in your main app's Gemfile
+Please see the Foreman wiki for appropriate instructions:
 
-```ruby
-  gem "foreman_custom_parameters", :git => "git://github.com/isratrade/foreman_custom_parameters.git"
-```
+* [Foreman: How to Install a Plugin](http://projects.theforeman.org/projects/foreman/wiki/How_to_Install_a_Plugin)
 
-Create file /config/custom_parameters.yml in main app's directory which defines the defaut parameters and defeault value for each host.
+The gem name is "foreman_custom_parameters".  Run `foreman-rake db:migrate` after installation.
+
+RPM users can install the "ruby193-rubygem-foreman_custom_parameters" or "rubygem-foreman_custom_parameters" packages.
+
+Create file config/settings.plugins.d/custom_parameters.yaml in main app's directory which defines the defaut parameters and defeault value for each host.
 The default value may be nil.  Wrap integer values in quotes to avoid errors.
 
 
-```
+```yaml
+:custom_parameters:
   hosts:
     cabinet_number: '12'
     cabinet_nickname: red
