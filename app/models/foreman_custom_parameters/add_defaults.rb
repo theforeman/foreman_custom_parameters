@@ -8,9 +8,9 @@ module ForemanCustomParameters
     end
 
     def add_default_custom_parameters
-      if CUSTOM_PARAMETERS[parameters_type].present?
-        unless self.send(parameters_method).map(&:name).any? { |name| CUSTOM_PARAMETERS[parameters_type].include?(name) }
-          CUSTOM_PARAMETERS[parameters_type].each do |k, v|
+      if SETTINGS[:custom_parameters][parameters_type].present?
+        unless self.send(parameters_method).map(&:name).any? { |name| SETTINGS[:custom_parameters][parameters_type].include?(name) }
+          SETTINGS[:custom_parameters][parameters_type].each do |k, v|
             self.send(parameters_method).build(:name => k, :value => v)
           end
         end
