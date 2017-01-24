@@ -1,6 +1,6 @@
 # Custom parameters and their default value
 # When a new host is created, a Host Parameter is automatically added with the default value
-# Note: Ensure that are integers are wrapped with quotes to avoid errors
+# Note: Ensure that integers are wrapped with quotes to avoid errors
 
 :custom_parameters:
 #  hosts:
